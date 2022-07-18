@@ -10,6 +10,9 @@
 ![](Assets/Screen%20Shot%202022-07-18%20at%2011.20.55%20AM.png) 
 
 ## URL links
+Website URL : https://rangelf09.github.io/Scramble-Password/
+
+Git Hub URL : https://github.com/rangelf09/Scramble-Password
 
 
 
