@@ -14,40 +14,40 @@ function generatePassword() {
 
   // 2. Prompt for incorrect lenght
   while (passLength <=7 || passLength  >=129){
-    alert("password is to long or to short");
+    window.alert("password is to long or to short");
     var passLength = (window.prompt("Select between 8-128 characters for your password." ));
 }
 // 3. Prompt how long your password will be. 
-     alert("Your password is going to be " + passLength + " characters long.");
+     window.alert("Your password is going to be " + passLength + " characters long.");
 
 // 4. Creating options on characters chosen
 var addUpperCase = window.confirm("Include upper case chacters? (Ok =Yes and Cancel=No)");
 var addLowerCase = window.confirm("Include lower case characters? (Ok =Yes and Cancel=No)");
 var addNumbers = window.confirm("Include number characters? (Ok =Yes and Cancel=No)");
-var addSpecialCharacter = confirm("Include special characters?(Ok =Yes and Cancel=No)");
+var addSpecialCharacter = window.confirm("Include special characters?(Ok =Yes and Cancel=No)");
 
   // 5. When user Types NO for all characters
   while (
     addUpperCase === false && addLowerCase === false && addNumbers === false && addSpecialCharacter === false ) {
     // 6. Promt to select one prompt and run the while loop again
-    alert("You must select at least one character type!");
+    window.alert("You must select at least one character type!");
 
   var addUpperCase = window.confirm("Include upper case characters? (Ok =Yes and Cancel=No)");
   var addLowerCase = window.confirm("Include lower case characters? (Ok =Yes and Cancel=No)");
   var addNumbers = window.confirm("Include number characters? (Ok =Yes and Cancel=No)");
-  var addSpecialCharacter = confirm("Include special characters?(Ok =Yes and Cancel=No)");
+  var addSpecialCharacter = window.confirm("Include special characters?(Ok =Yes and Cancel=No)");
   }
   
   //7. Combining the strings to create the password
   var passwordString = []
-    if (addUpperCase) {passwordString = passwordString.concat(uppperCase)}
-    if (addLowerCase) {passwordString = passwordString.concat(lowerCase)}
-    if (addNumbers) {passwordString = passwordString.concat(numbers)}
-    if (addSpecialCharacter) {passwordString = passwordString.concat(specialCharacters)}
+    if (addUpperCase === true) {passwordString = passwordString.concat(uppperCase)}
+    if (addLowerCase === true) {passwordString = passwordString.concat(lowerCase)}
+    if (addNumbers === true) {passwordString = passwordString.concat(numbers)}
+    if (addSpecialCharacter === true) {passwordString = passwordString.concat(specialCharacters)}
 
   // 8. New scrambled password
   var scramblePassword = " "
-// 9. Creating for loop for the password and 
+// 9. Creating for loop for the password and returning it. 
   for (var i = 0; i <  passLength; i++) {
     scramblePassword = scramblePassword + passwordString[Math.floor(Math.random() * passwordString.length)];
   }
